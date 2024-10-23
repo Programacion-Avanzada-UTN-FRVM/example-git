@@ -14,9 +14,9 @@ public class PrioridadProyecto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "prioridad" , nullable = false, unique = true)
+    @Column(name = "nombre" , nullable = false, unique = true)
     @NonNull
-    private String prioridad;
+    private String nombre;
 
     @Column(name = "fecha_eliminacion")
     private LocalDateTime fechaEliminacion;

@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 public class PrioridadProyectoDTO {
 
     private Long id;
-    private String prioridad;
+    private String nombre;
     private LocalDateTime fechaEliminacion;
 
 }

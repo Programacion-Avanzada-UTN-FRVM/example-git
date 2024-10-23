@@ -11,25 +11,28 @@ public interface IPrioridadProyectoService {
 
     public List<PrioridadProyectoDTO> findAllByFechaEliminacionIsNotNull();
 
-    public PrioridadProyecto findById(Integer id);
+    public PrioridadProyecto findById(Long id);
 
-    public PrioridadProyecto findByIdAndFechaEliminacionIsNull(Integer id);
+    public PrioridadProyecto findByIdAndFechaEliminacionIsNull(Long id);
 
-    public PrioridadProyecto findByIdAndFechaEliminacionIsNotNull(Integer id);
+    public PrioridadProyecto findByIdAndFechaEliminacionIsNotNull(Long id);
 
-    public PrioridadProyecto findByPrioridad(String prioridad);
+    public PrioridadProyecto findByNombre(String nombre);
 
-    public PrioridadProyecto findByPrioridadAndFechaEliminacionIsNull(String prioridad);
+    public PrioridadProyecto findByNombreAndFechaEliminacionIsNull(String nombre);
 
-    public PrioridadProyecto findByPrioridadAndFechaEliminacionIsNotNull(String prioridad);
+    public PrioridadProyecto findByNombreAndFechaEliminacionIsNotNull(String nombre);
 
-    public void save(PrioridadProyecto prioridadProyecto);
+    public PrioridadProyecto crear(PrioridadProyectoDTO prioridadProyectoDTO);
 
-    public void deleteById(Integer id);
+    public void deleteById(Long id);
 
-    public void deleteByPrioridad(String prioridad);
+    public void deleteByNombre(String nombre);
 
-    public void recuperarPorId(Integer id);
+    public void recuperarPorId(Long id);
 
-    public void recuperarPorPrioridad(String prioridad);
+    public void recuperarPorNombre(String nombre);
+
+    public PrioridadProyecto update(PrioridadProyectoDTO prioridadProyectoDTO);
+
 }

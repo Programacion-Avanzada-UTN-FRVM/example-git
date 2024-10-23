@@ -8,26 +8,26 @@ import java.util.Optional;
 
 public interface PrioridadProyectoRepository extends JpaRepository<PrioridadProyecto,Integer> {
 
-    Optional<PrioridadProyecto> findByPrioridad(String prioridad);
+    Optional<PrioridadProyecto> findByNombre(String nombre);
 
-    Optional<PrioridadProyecto> findByPrioridadAndFechaEliminacionIsNull(String prioridad);
+    Optional<PrioridadProyecto> findByNombreAndFechaEliminacionIsNull(String nombre);
 
-    Optional<PrioridadProyecto> findByPrioridadAndFechaEliminacionIsNotNull(String prioridad);
+    Optional<PrioridadProyecto> findByNombreAndFechaEliminacionIsNotNull(String nombre);
 
-    Optional<PrioridadProyecto> findById(Integer id);
+    Optional<PrioridadProyecto> findById(Long id);
 
-    Optional<PrioridadProyecto> findByIdAndFechaEliminacionIsNull(Integer id);
+    Optional<PrioridadProyecto> findByIdAndFechaEliminacionIsNull(Long id);
 
-    Optional<PrioridadProyecto> findByIdAndFechaEliminacionIsNotNull(Integer id);
+    Optional<PrioridadProyecto> findByIdAndFechaEliminacionIsNotNull(Long id);
 
     List<PrioridadProyecto> findAllByFechaEliminacionIsNull();
 
     List<PrioridadProyecto> findAllByFechaEliminacionIsNotNull();
 
-    boolean existsByPrioridad(String prioridad);
+    boolean existsByNombre(String nombre);
 
-    boolean existsByPrioridadAndFechaEliminacionIsNull(String prioridad);
+    boolean existsByNombreAndFechaEliminacionIsNull(String nombre);
 
-    boolean existsByPrioridadAndFechaEliminacionIsNotNull(String prioridad);
+    boolean existsByNombreAndFechaEliminacionIsNotNull(String nombre);
 
 }
