@@ -9,7 +9,7 @@ import com.example.project.management.Model.Cliente;
 import com.example.project.management.Repository.ClienteRepository;
 
 @Service
-public class ClienteService {
+public class ClienteService implements IClienteService{
     @Autowired
     private ClienteRepository clienteRepository;
 
